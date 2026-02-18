@@ -4,13 +4,13 @@ name : Continuous Deployment
 on :
   push:
     # only when there is a push on main branch
-    branches : [""]    
+    branches : ["main"]    
 
 jobs:
   build-and-deploy:
-    runs-on :
+    runs-on :ubuntu-latest
 
-    steps :
+    steps :git 
     # setup
     - name : Setup
       uses : actions/checkout@v4
